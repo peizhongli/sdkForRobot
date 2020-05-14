@@ -93,7 +93,7 @@ class Robot {
         }
         input.onkeyup = () => {
             if (event.keyCode == 13) {
-                sendMes()
+                this.sendMes()
             }
         }
         window.robotReady = true
@@ -107,7 +107,7 @@ class Robot {
             "userId": this.userId,
             "userQuestion": content
         }
-        this.http.post('http://10.99.163.99:3888/api/robot/robotqa', postData)
+        this.http.post('http://robot.servicetest.lenovo/api/robot/robotqa', postData)
             .then(res => {
                 console.log(res)
                 switch (res.code) {
@@ -123,7 +123,7 @@ class Robot {
                             this.http = new Http(this.userIdentity, true, this.apiId)
                             this.ask(content)
                         } else {
-                            throw '接口鉴权失败,请传入秘钥并对机器人再次进行初始化'
+                            throw '接口鉴权失败,请传入企业密钥并对机器人再次进行初始化'
                         }
                         break;
                     }

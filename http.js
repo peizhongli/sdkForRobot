@@ -11,7 +11,7 @@ http.createServer((req, res) => {
     var file_name = "." + req.url
 //如果./后面没有请求路径    默认访问index 页面
     if (file_name == "./") {
-        file_name = "./mini.html"
+        file_name = "./test.html"
     }
 //否则 开始读文件   
     fs.readFile(file_name, (err, data) => {

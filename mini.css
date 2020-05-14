@@ -127,3 +127,6 @@
 #robot .name {
     font-size: 12px;
 }
+#robot bubble {
+    display: none;
+}
