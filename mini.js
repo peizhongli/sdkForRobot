@@ -107,7 +107,7 @@ class Robot {
             "userId": this.userId,
             "userQuestion": content
         }
-        this.http.post('http://robot.servicetest.lenovo/api/robot/robotqa', postData)
+        this.http.post('http://10.99.162.2:3888/api/robot/robotqa', postData)
             .then(res => {
                 console.log(res)
                 switch (res.code) {
